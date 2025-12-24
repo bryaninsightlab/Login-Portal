@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publisher Portal - Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .login-container {
+            background: white;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 400px;
+            width: 100%;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo h1 {
+            font-size: 32px;
+            color: #1a202c;
+            margin-bottom: 10px;
+        }
+        
+        .logo p {
+            color: #718096;
+            font-size: 14px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #4a5568;
+            font-weight: 500;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .error-msg {
+            color: #e53e3e;
+            font-size: 14px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        
+        .demo-info {
+            margin-top: 30px;
+            padding: 15px;
+            background: #f7fafc;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #718096;
+        }
+        
+        .demo-info strong {
+            color: #4a5568;
+        }
+        
+        .demo-info .warning {
+            color: #e53e3e;
+            display: block;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <h1>Publisher Portal</h1>
+            <p>Access Your Dashboard</p>
+        </div>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    placeholder="your-email@example.com" 
+                    required
+                    autocomplete="email"
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="Enter your password" 
+                    required
+                    autocomplete="current-password"
+                >
+            </div>
+            
+            <button type="submit">Login to Dashboard</button>
+            
+            <div id="error-msg" class="error-msg"></div>
+        </form>
+        
+        <!-- TEMPLATE DEMO CREDENTIALS - BUYERS SHOULD REMOVE THIS SECTION -->
+        <div class="demo-info">
+            <strong>Demo Accounts (Template):</strong><br>
+            <br>
+            <strong>Publisher Login:</strong><br>
+            Email: publisher-a@example.com<br>
+            Password: demo2024<br>
+            <br>
+            <strong>Owner Login:</strong><br>
+            Email: owner@example.com<br>
+            Password: admin2024<br>
+            <br>
+            <span class="warning">⚠️ BUYERS: Remove this demo section before going live!</span>
+        </div>
+    </div>
+    
+    <script src="login.js"></script>
+</body>
+</html>
