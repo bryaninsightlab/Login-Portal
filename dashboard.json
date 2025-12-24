@@ -1,0 +1,44 @@
+{
+  "publisher-a@example.com": {
+    "password": "demo2024",
+    "publisherName": "Tech News Daily",
+    "domain": "publisher-a.com",
+    "dashboard": "YOUR_PUBLISHER_DASHBOARD_EMBED_URL?params=%7B%22df3%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580publisher-a.com%22%7D",
+    "dashboardType": "publisher"
+  },
+  "publisher-b@example.com": {
+    "password": "demo2024",
+    "publisherName": "Gaming Central",
+    "domain": "publisher-b.com",
+    "dashboard": "YOUR_PUBLISHER_DASHBOARD_EMBED_URL?params=%7B%22df3%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580publisher-b.com%22%7D",
+    "dashboardType": "publisher"
+  },
+  "publisher-c@example.com": {
+    "password": "demo2024",
+    "publisherName": "Lifestyle Hub",
+    "domain": "publisher-c.com",
+    "dashboard": "YOUR_PUBLISHER_DASHBOARD_EMBED_URL?params=%7B%22df3%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580publisher-c.com%22%7D",
+    "dashboardType": "publisher"
+  },
+  "publisher-d@example.com": {
+    "password": "demo2024",
+    "publisherName": "Sports Network",
+    "domain": "publisher-d.com",
+    "dashboard": "YOUR_PUBLISHER_DASHBOARD_EMBED_URL?params=%7B%22df3%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580publisher-d.com%22%7D",
+    "dashboardType": "publisher"
+  },
+  "publisher-e@example.com": {
+    "password": "demo2024",
+    "publisherName": "Finance Pulse",
+    "domain": "publisher-e.com",
+    "dashboard": "YOUR_PUBLISHER_DASHBOARD_EMBED_URL?params=%7B%22df3%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580publisher-e.com%22%7D",
+    "dashboardType": "publisher"
+  },
+  "owner@example.com": {
+    "password": "admin2024",
+    "publisherName": "Network Owner",
+    "domain": "all",
+    "dashboard": "YOUR_OWNER_DASHBOARD_EMBED_URL",
+    "dashboardType": "owner"
+  }
+}
