@@ -1,0 +1,85 @@
+LOGIN PORTAL CONFIGURATION GUIDE
+================================
+
+This login portal routes publishers to their individual dashboards.
+
+HOW IT WORKS:
+1. Publisher logs in with email/password
+2. System looks up their credentials in dashboard.json
+3. Redirects to their dashboard with filter applied
+4. They see only their data
+
+SETUP INSTRUCTIONS:
+===================
+
+STEP 1: Update Dashboard URLs
+------------------------------
+Open dashboard.json and replace:
+
+- YOUR_PUBLISHER_DASHBOARD_EMBED_URL 
+  → Your actual Publisher Dashboard embed URL (5 places)
+  
+- YOUR_OWNER_DASHBOARD_EMBED_URL
+  → Your actual Owner Dashboard embed URL (1 place)
+
+IMPORTANT: Keep the ?params=... part for publisher dashboards!
+
+STEP 2: Update Credentials
+---------------------------
+For each publisher, update:
+- Email address
+- Password (use secure passwords!)
+- Publisher name
+- Domain (must match exactly what's in your Google Sheet)
+
+STEP 3: Deploy to Cloudflare Pages
+-----------------------------------
+1. Go to pages.cloudflare.com
+2. Create new project
+3. Choose "Direct Upload"
+4. Upload all 3 files (index.html, login.js, dashboard.json)
+5. Deploy!
+6. Your portal URL: yourcompany.pages.dev
+
+STEP 4: Test
+------------
+1. Visit your portal URL
+2. Login with one publisher credential
+3. Verify correct data shows
+4. Test owner login
+5. Verify all publishers visible
+
+STEP 5: Share
+-------------
+Send each publisher:
+- Portal URL: https://yourcompany.pages.dev
+- Their email address
+- Their password
+
+ADDING NEW PUBLISHERS:
+======================
+
+To add a new publisher, add this to dashboard.json:
+
+{
+  "newpublisher@example.com": {
+    "password": "secure_password",
+    "publisherName": "New Publisher Name",
+    "domain": "newpublisher.com",
+    "dashboard": "YOUR_PUBLISHER_DASHBOARD_URL?params=%7B%22df3%22:%22include%25EE%2580%25800%25EE%2580%2580IN%25EE%2580%2580newpublisher.com%22%7D",
+    "dashboardType": "publisher"
+  }
+}
+
+Make sure the domain in the URL matches EXACTLY what's in your Google Sheet!
+
+SECURITY NOTES:
+===============
+- Use strong passwords for each publisher
+- Change all passwords from the demo ones (demo2024, admin2024)
+- Portal files are public - credentials are in JSON (not ideal for production)
+- For production systems, consider backend authentication
+
+SUPPORT:
+========
+Questions? Email: bryaninsightlab@gmail.com
